@@ -7,6 +7,7 @@ import ShoppingCartOutlined from '@mui/icons-material/ShoppingCartOutlined';
 
 const Container = styled.div`
     height:60px;
+    background-color:pink;
 `
 
 const Wrapper = styled.div`
@@ -32,6 +33,7 @@ display:flex;
 margin-left:25px;
 padding:5px;
 align-items:center;
+background-color:white;
 `;
 
 const Input = styled.input`
@@ -78,7 +80,7 @@ const Navbar = () => {
                 <Right>
                     <MenuItem>REGISTER</MenuItem>
                     <MenuItem>SIGN IN</MenuItem>
-                    <MenuItem>
+                    <MenuItem style={{marginRight:"40px"}}>
                     <Badge badgeContent={4} color="secondary">
                     <ShoppingCartOutlined color="action" />
                     </Badge>
