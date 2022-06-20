@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 const Container =styled.div`
+/* border:2px solid green; */
 flex:1;
 margin:3px;
 height:70vh;
@@ -45,6 +46,12 @@ cursor:pointer;
 color:navy;
 ${'' /* border-radius:12px; */}
 ${'' /* background-color:transparent; */}
+:hover{
+    background-color:gold;
+    font-size:18px;
+    color:purple;
+    font-weight:700
+}
 
 `;
 
@@ -60,4 +67,4 @@ const CategoryItem = ({item}) => {
   )
 }
 
-export default CategoryItem
+export default CategoryItem;

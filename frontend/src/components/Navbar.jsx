@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import SearchIcon from '@mui/icons-material/Search';
-import { Badge} from '@mui/material';
+import { Badge } from '@mui/material';
 import ShoppingCartOutlined from '@mui/icons-material/ShoppingCartOutlined';
 
 
 const Container = styled.div`
+    /* border:2px solid navy; */
     height:60px;
     background-color:pink;
 `
@@ -18,6 +19,7 @@ const Wrapper = styled.div`
 `;
 
 const Left = styled.div`
+/* border:2px solid teal; */
 align-items:center;
 display:flex;
     flex: 1;
@@ -51,15 +53,17 @@ const Center = styled.div`
 `;
 
 const Right = styled.div`
+    /* border:2px solid purple; */
     flex: 1;
     display: flex;
-    align-item: center;
+    align-items: center;
     justify-content: flex-end;
 `;
 
 const MenuItem = styled.div`
 margin-left: 25px;
-font-size: 14px;
+font-size: 16px;
+font-weight:500;
 cursor: pointer;
 `
 
@@ -69,9 +73,9 @@ const Navbar = () => {
         <Container>
             <Wrapper>
                 <Left>
-                    <Language>English</Language>
-                    <SearchContainer><Input/>
-                        <SearchIcon style={{color:"gray", fontSize:16}}/>
+                    <Language style={{ fontSize: "16px", fontWeight: 500 }}>English</Language>
+                    <SearchContainer><Input />
+                        <SearchIcon style={{ color: "gray", fontSize: 16 }} />
                     </SearchContainer>
                 </Left>
                 <Center>
@@ -80,10 +84,10 @@ const Navbar = () => {
                 <Right>
                     <MenuItem>REGISTER</MenuItem>
                     <MenuItem>SIGN IN</MenuItem>
-                    <MenuItem style={{marginRight:"40px"}}>
-                    <Badge badgeContent={4} color="secondary">
-                    <ShoppingCartOutlined color="action" />
-                    </Badge>
+                    <MenuItem style={{ marginRight: "40px" }}>
+                        <Badge badgeContent={4} color="secondary">
+                            <ShoppingCartOutlined color="action" />
+                        </Badge>
                     </MenuItem>
                 </Right>
 

@@ -92,14 +92,14 @@ cursor:pointer;
 
 
 const Slider = () => {
-    const [slideIndex, setSlideIndex] = useState()
+    const [slideIndex, setSlideIndex] = useState(0)
 
     const handleClick= (direction)=>{
         if(direction==='left'){
-            setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2)
+            setSlideIndex(slideIndex > 0 ? slideIndex-1 : 3)
         }
         else{
-            setSlideIndex(slideIndex < 2 ? slideIndex+1 : 0)
+            setSlideIndex(slideIndex < 3 ? slideIndex+1 : 0)
         }
     }
 
@@ -111,7 +111,7 @@ const Slider = () => {
             <Wrapper slideIndex={slideIndex}>
                 {sliderItems.map((item) => (
 
-                <Slide bg={item.bg}>
+                <Slide bg={item.bg} key= {item.id}>
 
                     <ImgContainer>
                         <Image src={item.img}/>
